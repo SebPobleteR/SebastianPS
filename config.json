@@ -1,0 +1,134 @@
+{
+  "folderStructure": {
+    "resources": "./resources/",
+    "data": "./data/",
+    "packets": "./packets/",
+    "scripts": "./resources/Scripts/",
+    "plugins": "./plugins/"
+  },
+  "databaseInfo": {
+    "server": {
+      "connectionUri": "mongodb://localhost:27017",
+      "collection": "grasscutter"
+    },
+    "game": {
+      "connectionUri": "mongodb://localhost:27017",
+      "collection": "grasscutter"
+    }
+  },
+  "language": {
+    "language": "en_US",
+    "fallback": "en_US",
+    "document": "EN"
+  },
+  "account": {
+    "autoCreate": false,
+    "defaultPermissions": [],
+    "maxPlayer": -1
+  },
+  "server": {
+    "debugLevel": "NONE",
+    "DebugWhitelist": [],
+    "DebugBlacklist": [],
+    "runMode": "HYBRID",
+    "http": {
+      "bindAddress": "0.0.0.0",
+      "accessAddress": "127.0.0.1",
+      "bindPort": 4443,
+      "accessPort": 0,
+      "encryption": {
+        "useEncryption": true,
+        "useInRouting": true,
+        "keystore": "./keystore.p12",
+        "keystorePassword": "123456"
+      },
+      "policies": {
+        "cors": {
+          "enabled": false,
+          "allowedOrigins": [
+            "*"
+          ]
+        }
+      },
+      "files": {
+        "indexFile": "./index.html",
+        "errorFile": "./404.html"
+      }
+    },
+    "game": {
+      "bindAddress": "0.0.0.0",
+      "accessAddress": "127.0.0.1",
+      "bindPort": 22102,
+      "accessPort": 0,
+      "loadEntitiesForPlayerRange": 100,
+      "enableScriptInBigWorld": false,
+      "enableConsole": true,
+      "gameOptions": {
+        "inventoryLimits": {
+          "weapons": 20000,
+          "relics": 20000,
+          "materials": 20000,
+          "furniture": 20000,
+          "all": 300000
+        },
+        "avatarLimits": {
+          "singlePlayerTeam": 8,
+          "multiplayerTeam": 8
+        },
+        "sceneEntityLimit": 1000,
+        "watchGachaConfig": false,
+        "enableShopItems": true,
+        "staminaUsage": true,
+        "energyUsage": true,
+        "resinOptions": {
+          "resinUsage": true,
+          "cap": 160,
+          "rechargeTime": 480
+        },
+        "rates": {
+          "adventureExp": 1.0,
+          "mora": 1.0,
+          "leyLines": 1.0
+        }
+      },
+      "joinOptions": {
+        "welcomeEmotes": [
+          2007,
+          1002,
+          4010
+        ],
+        "welcomeMessage": "Bienvenido Android PS",
+        "welcomeMail": {
+          "title": "Bienvenido Android PS",
+          "content": "Regalo de Bienvenido",
+          "sender": "AndroidPS",
+          "items": [
+            {
+              "itemId": 223,
+              "itemCount": 100,
+              "itemLevel": 1
+            },
+            {
+              "itemId": 223,
+              "itemCount": 100,
+              "itemLevel": 1
+            }
+          ]
+        }
+      },
+      "serverAccount": {
+        "avatarId": 10000007,
+        "nameCardId": 210001,
+        "adventureRank": 1,
+        "worldLevel": 0,
+        "nickName": "Consola",
+        "signature": "Android PS"
+      }
+    },
+    "dispatch": {
+      "regions": [],
+      "defaultName": "Grasscutter"
+    }
+  },
+  "version": 3
+}
